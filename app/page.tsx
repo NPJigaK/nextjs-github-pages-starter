@@ -1,6 +1,7 @@
 import ExportedImage from 'next-image-export-optimizer'
 import vercelImagePath from '@/public/images/vercel.png'
 import nextImagePath from '@/public/images/next.png'
+import packageJson from '@/package.json'
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
               width={100}
               height={24}
               priority
+              basePath={packageJson.name} // your github repository name
             />
           </a>
         </div>
@@ -38,6 +40,7 @@ export default function Home() {
           width={180}
           height={37}
           priority
+          basePath={packageJson.name}
         />
       </div>
 
